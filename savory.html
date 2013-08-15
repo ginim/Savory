@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Savory - Personal Recipe Saver</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+<h1>Savory</h1>
+<h2>Personal recipe saver.</h2>
+
+<div role="main">
+
+	<div id="recipe_form">
+    	<div id="ingredients">
+            Ingredients:
+			<div id="ingredient_fields">
+            	<div class="ingredient">Ingredient 1 <input name="ingredient1" id="ingredient1" type="text" /><span class="delete_field"> - </span></div>
+                <div class="ingredient">Ingredient 2 <input name="ingredient2" id="ingredient2" type="text" /><span class="delete_field"> - </span></div>
+                <div class="ingredient">Ingredient 3 <input name="ingredient3" id="ingredient3" type="text" /><span class="delete_field"> - </span></div>
+			</div>
+            <div id="ingredient_fields2">
+            </div>
+            <a id="add_ingredient">+ Add More Ingredient Fields</a>
+	  </div>
+        <div id="instructions">
+        	<div id="preparation">
+        	Preparation:
+            <textarea name="" cols="" rows=""></textarea>
+            </div>
+            <div id="cooking">
+            Cooking Instructions:
+            <textarea name="" cols="" rows=""></textarea>
+            </div>
+            <div id="serving">
+            Serving, or Additional, Notes:
+            <textarea name="" cols="" rows=""></textarea>
+            </div>
+        </div>
+  </div>
+
+	<div id="recipe">
+    </div>
+
+</div>
+
+<script type="text/javascript">
+var i=3;
+
+// Add New Ingredient Field
+$('#add_ingredient').on('click', function(){
+	i++;
+	$add_field = '<div class="ingredient">Ingredient '+i+' <input name="ingredient'+i+'" id="ingredient'+i+'" type="text" /><span class="delete_field"> - </span></div>';
+	$('#ingredient_fields2').before($add_field);
+});
+
+// Remove Ingredient Field
+$('#ingredient_fields').on('click', '.delete_field', function(){
+   $(this).parent().remove();
+});
+</script>
+</body>
+</html>
