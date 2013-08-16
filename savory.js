@@ -1,4 +1,4 @@
-var i=2;
+var i=3;
 
 // Add New Ingredient Field
 $('#add_ingredient').on('click', function(){
@@ -12,14 +12,8 @@ $('body').delegate('.delete_field', 'click', function(){
    $(this).parent().remove();
 });
 
-// Create Recipe
 $("#create_recipe").on('click', function() {	
 	$("#prepare").text($("#preparation").val());
 	$("#cook").text($("#cooking").val());
 	$("#serve").text($("#serving").val());
-
-	var ingredients = $('.ingredient').length;
-	for (var i=0; i < ingredients; i++) {
-		$("#ingredients_list ul").append("<li>" + ($("#ingredient"+i).val()) + "</li>");
-	}
 });
