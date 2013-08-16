@@ -1,8 +1,6 @@
 // Add New Ingredient Field
 $('#add_ingredient').on('click', function(){
-	var i = ($('.ingredient').length -1);
-	i++;
-	$add_field = '<div class="ingredient"><input name="ingredient'+i+'" id="ingredient'+i+'" type="text" /><span class="delete_field"> - </span></div>';
+	$add_field = '<div class="ingredient"><input type="text" /><span class="delete_field"> - </span></div>';
 	$('#ingredients').before($add_field);
 });
 
@@ -17,8 +15,13 @@ $("#create_recipe").on('click', function() {
 	$("#cook").text($("#cooking").val());
 	$("#serve").text($("#serving").val());
 
-	var ingredients = $('.ingredient').length;
+/*	var ingredients = $('.ingredient').length;
 	for (var i=0; i < ingredients; i++) {
 		$("#ingredients_list ul").append("<li>" + ($("#ingredient"+i).val()) + "</li>");
 	}
+*/
+	$(".ingredient input").each(function() {
+		listIngredient = $(this).val();
+		$("#ingredients_list ul").append("<li>" +listIngredient+ "</li>");
+	});
 });
