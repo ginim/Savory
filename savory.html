@@ -17,9 +17,9 @@
 <div role="main">
 	<div id="recipe_form">
         <h3>Ingredients:</h3>
+            <div class="ingredient"><input name="ingredient0" id="ingredient0" type="text" /><span class="delete_field"> - </span></div>
             <div class="ingredient"><input name="ingredient1" id="ingredient1" type="text" /><span class="delete_field"> - </span></div>
             <div class="ingredient"><input name="ingredient2" id="ingredient2" type="text" /><span class="delete_field"> - </span></div>
-            <div class="ingredient"><input name="ingredient3" id="ingredient3" type="text" /><span class="delete_field"> - </span></div>
             <div id="ingredients"></div>
         <a id="add_ingredient">+ Add More Ingredient Fields</a>
         <h3>Preparation:</h3>
@@ -32,6 +32,9 @@
     </div>
 
 	<div id="recipe">
+        <div id="ingredients_list"> 
+            <ul></ul>
+        </div>
     	<div id="prepare"></div>
         <div id="cook"></div>
         <div id="serve"></div>
