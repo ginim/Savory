@@ -3,7 +3,7 @@ var i=3;
 // Add New Ingredient Field
 $('#add_ingredient').on('click', function(){
 	i++;
-	$add_field = '<div class="ingredient">Ingredient '+i+' <input name="ingredient'+i+'" id="ingredient'+i+'" type="text" /><span class="delete_field"> - </span></div>';
+	$add_field = '<div class="ingredient"><input name="ingredient'+i+'" id="ingredient'+i+'" type="text" /><span class="delete_field"> - </span></div>';
 	$('#ingredients').before($add_field);
 });
 
