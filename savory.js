@@ -15,11 +15,6 @@ $("#create_recipe").on('click', function() {
 	$("#cook").text($("#cooking").val());
 	$("#serve").text($("#serving").val());
 
-/*	var ingredients = $('.ingredient').length;
-	for (var i=0; i < ingredients; i++) {
-		$("#ingredients_list ul").append("<li>" + ($("#ingredient"+i).val()) + "</li>");
-	}
-*/
 	$(".ingredient input").each(function() {
 		listIngredient = $(this).val();
 		$("#ingredients_list ul").append("<li>" +listIngredient+ "</li>");
