@@ -1,7 +1,6 @@
 // Add New Ingredient Field
 $('#add_ingredient').on('click', function(){
-	$add_field = '<div class="ingredient"><input type="text" /><span class="delete_field"> - </span></div>';
-	$('#ingredients').before($add_field);
+	$('#ingredients').append('<div class="ingredient"><input type="text" /><span class="delete_field"> - </span></div>');
 });
 
 // Remove Ingredient Field
