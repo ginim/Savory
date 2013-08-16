@@ -37,3 +37,43 @@ h1 {
 	background-position: left 6px;
 	padding-left: 35px;
 }
+input, textarea {
+	margin: 2px 0px;
+	border: solid 2px #CCCCCC;
+	padding: 2px 4px;
+	font-size: large;
+	width: 300px;
+}
+	input:hover, textarea:hover {
+		border: solid 2px #b3e4c2;
+	}
+	textarea {
+		margin-bottom: 30px;
+	}
+.delete_field {
+	font-family: sans-serif;
+	color: #CCCCCC;
+	cursor: pointer;
+}
+	.delete_field:hover {
+		color: #ff3333;
+	}
+#add_ingredient {
+	margin: 10px 0px 30px 0px;
+}
+	#add_ingredient a {
+		cursor: pointer;
+	}
+		#add_ingredient a:hover {
+			color: #009933;
+		}
+#create_recipe a {
+	background: #009933;
+	color: #FFFFFF;
+	padding: 5px 15px;
+	font-size: large;
+	cursor: pointer;
+}
+	#create_recipe a:hover {
+		background: #3ebc64;
+	}

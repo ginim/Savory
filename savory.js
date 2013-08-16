@@ -1,6 +1,6 @@
 // Add New Ingredient Field
-$('#add_ingredient').on('click', function(){
-	$('#ingredients').append('<div class="ingredient"><input type="text" /><span class="delete_field"> - </span></div>');
+$('#add_ingredient a').on('click', function(){
+	$('#ingredients').append('<div class="ingredient"><input type="text" /><span class="delete_field"> x </span></div>');
 });
 
 // Remove Ingredient Field
@@ -9,7 +9,7 @@ $('body').delegate('.delete_field', 'click', function(){
 });
 
 // Create Recipe
-$("#create_recipe").on('click', function() {	
+$("#create_recipe a").on('click', function() {	
 	$("#prepare").text($("#preparation").val());
 	$("#cook").text($("#cooking").val());
 	$("#serve").text($("#serving").val());
