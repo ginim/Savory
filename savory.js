@@ -9,7 +9,8 @@ $('body').delegate('.delete_field', 'click', function(){
 });
 
 // Create Recipe
-$("#create_recipe a").on('click', function() {	
+$("#create_recipe a").on('click', function() {
+	$("#recipe_title").text($("#recipe_name").val());
 	$("#prepare").text($("#preparation").val());
 	$("#cook").text($("#cooking").val());
 	$("#serve").text($("#serving").val());
